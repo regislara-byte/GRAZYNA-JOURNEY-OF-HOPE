@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grażyna Nowak — Journey of Hope</title>
+  <meta name="description" content="A mother's fight. A family's strength. A community's support. Follow Grażyna Nowak's recovery journey." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-name">Grażyna Nowak</span>
+        <span class="nav-logo-subtitle">Journey of Hope</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Her Story</a></li>
+        <li><a href="#journey">Recovery</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#support" class="nav-cta">Support</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about" onclick="toggleMenu()">Her Story</a>
+      <a href="#journey" onclick="toggleMenu()">Recovery</a>
+      <a href="#updates" onclick="toggleMenu()">Updates</a>
+      <a href="#support" onclick="toggleMenu()">Support</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-image-wrap">
+      <!-- Replace with family photo: assets/images/nowak1.png -->
+      <img
+        src="assets/images/nowak1.png"
+        alt="Grażyna Nowak — before and after her diagnosis"
+        class="hero-img"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+      />
+      <div class="hero-img-placeholder" style="display:none">
+        <span>assets/images/nowak1.png</span>
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">A Documentary of Resilience</p>
+      <h1 class="hero-title">
+        Grażyna Nowak
+      </h1>
+      <p class="hero-tagline">
+        <em>A mother's fight.</em><br />
+        A family's strength.<br />
+        A community's support.
+      </p>
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-primary">Read Her Story</a>
+        <a href="#updates" class="btn btn-ghost">Latest Updates</a>
+        <a href="https://www.siepomaga.pl/grazyna-nowak" target="_blank" rel="noopener" class="btn btn-outline">Official Support Page</a>
+      </div>
+    </div>
+
+    <!-- Torn-page chapter divider — the signature element -->
+    <div class="hero-torn" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT GRAŻYNA
+  ============================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+
+      <div class="section-label">Her Story</div>
+      <h2 class="section-title">Before the Diagnosis,<br /><em>There Was Grażyna</em></h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            Grażyna is a wonderful, helpful woman — and a devoted wife. For many years she worked at the Social Welfare Center (MOPS), spending her days supporting people in need.
+          </p>
+          <p>
+            She is known to those around her for her warmth, her patience, and her quiet dedication to others. Whether at work or at home, Grażyna gave generously — to colleagues, to neighbours, to anyone who needed someone in their corner.
+          </p>
+          <p>
+            She is a mother. She is a wife. She is a friend to many. She is the kind of person who shows up. That is who Grażyna was before February 2026 — and that is still who she is today.
+          </p>
+          <blockquote class="about-quote">
+            "The cancer diagnosis sounded like a death sentence. Today my wife has had three surgeries and is fighting."
+            <cite>— Thomas, her husband</cite>
+          </blockquote>
+        </div>
+
+        <div class="about-sidebar">
+          <div class="about-fact">
+            <span class="fact-number">51</span>
+            <span class="fact-label">Years old</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-number">3</span>
+            <span class="fact-label">Surgeries completed</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-number">17+</span>
+            <span class="fact-label">Supporters so far</span>
+          </div>
+          <div class="about-diagnosis">
+            <span class="diagnosis-label">Diagnosis</span>
+            <span class="diagnosis-value">Malignant Brain Tumor<br /><small>WHO III Astrocytoma, Ischemic Stroke</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RECOVERY JOURNEY — TIMELINE
+  ============================================================ -->
+  <section class="section journey sage-bg" id="journey">
+    <div class="container">
+
+      <div class="section-label">Recovery Timeline</div>
+      <h2 class="section-title">The Road She<br /><em>Is Walking</em></h2>
+      <p class="section-intro">
+        Every journey has a beginning. Every step forward — no matter how small — matters.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">Early 2026</div>
+            <h3 class="timeline-heading">Symptoms Appear</h3>
+            <p>Increasingly frequent headaches and persistent tiredness. Grażyna and Thomas thought it might be overwork. They had no idea what was coming.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--rose"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">February 2026</div>
+            <h3 class="timeline-heading">Life Changes Suddenly</h3>
+            <p>Grażyna collapsed unexpectedly. An ambulance. An emergency room. Initial suspicion of stroke. Then a transfer to neurosurgery — and a diagnosis that changed everything.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--rose"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">February 2026</div>
+            <h3 class="timeline-heading">Brain Tumor Confirmed</h3>
+            <p>Doctors confirmed: malignant brain tumor, WHO Grade III Astrocytoma. A serious, life-altering diagnosis. The family held together and faced it head on.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">March–April 2026</div>
+            <h3 class="timeline-heading">First Surgery &amp; Hope</h3>
+            <p>Grażyna underwent a very serious operation to remove the tumor. It initially appeared to be a success. On April 22nd, she was discharged home.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--rose"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">Late April 2026</div>
+            <h3 class="timeline-heading">Complications Set In</h3>
+            <p>Shortly after returning home, cerebrospinal fluid began leaking, requiring emergency surgery. A serious infection followed — leading to a life-saving third procedure.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--now"></div>
+          <div class="timeline-card timeline-card--now">
+            <div class="timeline-period">June 2026 — Now</div>
+            <h3 class="timeline-heading">Fighting Every Day</h3>
+            <p>Grażyna is now in the neurosurgery ward, connected to a respirator. Some days she sleeps. Other days she squeezes Thomas's hand. She is still here. She is still fighting.</p>
+            <!-- Replace with new recovery milestone -->
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--future"></div>
+          <div class="timeline-card timeline-card--future">
+            <div class="timeline-period">Ahead</div>
+            <h3 class="timeline-heading">Rehabilitation &amp; Recovery</h3>
+            <p>The goal: a specialist rehabilitation center. With the right care, Grażyna can regain her former life. That future is what this journey is working toward.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAMILY SECTION
+  ============================================================ -->
+  <section class="section family" id="family">
+    <div class="container">
+
+      <div class="family-grid">
+        <div class="family-image-wrap">
+          <!-- Replace with family photo: assets/images/nowak2.png -->
+          <img
+            src="assets/images/nowak2.png"
+            alt="Family supporting Grażyna — love never left her side"
+            class="family-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+          />
+          <div class="family-img-placeholder" style="display:none">
+            <span>assets/images/nowak2.png</span>
+          </div>
+        </div>
+
+        <div class="family-text">
+          <div class="section-label">Family &amp; Love</div>
+          <h2 class="section-title">Family Through<br /><em>Every Step</em></h2>
+          <p>
+            Thomas has been at Grażyna's side through each surgery, each setback, each small victory. He has held her hand when she could barely respond, and celebrated every moment she has squeezed back.
+          </p>
+          <p>
+            Love like this does not require words. It shows up. It stays. It does not give up.
+          </p>
+          <p>
+            This website exists because of Thomas — a husband who refuses to let the story end here, and who believes that if people know Grażyna, they will understand why fighting for her matters.
+          </p>
+          <div class="family-pull">
+            "Even if I worked multiple jobs, I wouldn't be able to pay for everything.<br />
+            <strong>But giving up is not an option.</strong>"
+            <cite>— Thomas</cite>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LATEST UPDATES — VLOG READY
+  ============================================================ -->
+  <section class="section updates sage-bg" id="updates">
+    <div class="container">
+
+      <div class="section-label">Updates</div>
+      <h2 class="section-title">Latest from<br /><em>the Family</em></h2>
+
+      <div class="updates-grid">
+
+        <!-- Replace with YouTube video -->
+        <div class="update-video-card">
+          <div class="video-placeholder">
+            <div class="video-play-icon" aria-hidden="true">▶</div>
+            <p class="video-placeholder-text">Family video update</p>
+            <p class="video-placeholder-sub"><!-- Replace with YouTube embed iframe --><br />A vlog update from Thomas will appear here.</p>
+          </div>
+          <div class="video-card-meta">
+            <span class="video-label">Latest Vlog</span>
+            <p class="video-title"><!-- Replace with family update --><br />Video update coming soon</p>
+          </div>
+        </div>
+
+        <!-- Replace with family update -->
+        <div class="update-cards">
+          <div class="update-card">
+            <div class="update-date">June 2026</div>
+            <h3 class="update-heading">Still Fighting</h3>
+            <p>Grażyna remains in the neurosurgery ward. The family visits daily. She sometimes shakes Thomas's hand — those moments carry the whole family through.</p>
+            <!-- Replace with family message -->
+          </div>
+          <div class="update-card update-card--placeholder">
+            <div class="update-date">Coming soon</div>
+            <h3 class="update-heading">Next Update</h3>
+            <p><!-- Replace with family update --><br />The family will share updates here as Grażyna's recovery continues.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MESSAGES OF HOPE
+  ============================================================ -->
+  <section class="section hope" id="hope">
+    <div class="container">
+
+      <div class="section-label">Community</div>
+      <h2 class="section-title">Messages of<br /><em>Hope</em></h2>
+
+      <div class="hope-quotes">
+        <div class="hope-quote">
+          <p>"Every recovery begins with hope."</p>
+        </div>
+        <div class="hope-quote hope-quote--rose">
+          <p>"Every message matters."</p>
+        </div>
+        <div class="hope-quote">
+          <p>"Every act of kindness helps carry someone forward."</p>
+        </div>
+        <div class="hope-quote hope-quote--rose">
+          <p>"Hope grows stronger when shared."</p>
+        </div>
+      </div>
+
+      <div class="hope-cta-soft">
+        <p>Know Grażyna? Have a word of encouragement?<br />Share this page and let her know the community is with her.</p>
+        <button id="shareBtn" class="btn-share">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share This Page
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OFFICIAL SUPPORT SECTION
+  ============================================================ -->
+  <section class="section support" id="support">
+    <div class="container support-inner">
+
+      <div class="section-label support-label">Official Fundraiser</div>
+      <h2 class="support-title">Support Grażyna's<br /><em>Recovery</em></h2>
+      <p class="support-body">
+        Grażyna needs specialist rehabilitation, ongoing care, and treatment. The costs are significant — too significant for one family to carry alone. All support is handled exclusively through the official Siepomaga fundraiser.
+      </p>
+      <p class="support-body">
+        A small donation, a shared post, a message to a friend — all of it helps.
+      </p>
+
+      <a
+        href="https://www.siepomaga.pl/grazyna-nowak"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-support"
+      >
+        Support Through Official Siepomaga Page →
+      </a>
+
+      <p class="support-note">
+        This website does not process payments. All financial support goes directly through the official Siepomaga Foundation fundraiser linked above.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRIVACY & CONSENT
+  ============================================================ -->
+  <section class="section consent">
+    <div class="container consent-inner">
+      <p>
+        This website is maintained as a family-controlled support archive. All donations and financial support are handled exclusively through the official Siepomaga fundraiser. Content is published with family approval.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-name">Grażyna Nowak — Journey of Hope</div>
+      <div class="footer-poem">
+        Every visit,<br />
+        every message,<br />
+        every shared memory,<br />
+        and every act of kindness<br />
+        helps carry hope forward.
+      </div>
+      <div class="footer-links">
+        <a href="https://www.siepomaga.pl/grazyna-nowak" target="_blank" rel="noopener">Official Siepomaga Fundraiser</a>
+        <span>·</span>
+        <a href="#about">Her Story</a>
+        <span>·</span>
+        <a href="#journey">Recovery</a>
+      </div>
+      <div class="footer-small">Family-controlled archive · Content published with consent · No payment processing on this site</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
