@@ -238,12 +238,7 @@
             Love like this does not require words. It shows up. It stays. It does not give up.
           </p>
           <p>
-            Today, this journey is no longer carried by one person alone.
-
-            What began as a husband's determination has become a shared effort embraced by family, friends, neighbors, volunteers, and compassionate supporters from the community.
-
-            This website exists to tell Grażyna's story, to honor the people standing beside her, and to remind us that even in the most difficult moments, hope grows stronger when it is shared.
-
+            This website exists because of Thomas — a husband who refuses to let the story end here, and who believes that if people know Grażyna, they will understand why fighting for her matters.
           </p>
           <div class="family-pull">
             "Even if I worked multiple jobs, I wouldn't be able to pay for everything.<br />
@@ -300,6 +295,91 @@
   </section>
 
   <!-- ============================================================
+       CHARITY AUCTION
+  ============================================================ -->
+  <section class="section auction" id="auction">
+    <div class="container">
+
+      <div class="section-label">Community Event</div>
+      <h2 class="section-title">Licytacja Charytatywna<br /><em>dla Grażyny Nowak</em></h2>
+      <p class="section-intro">
+        21 czerwca 2026 o godzinie 18:00 w Nowogrodźcu odbędzie się licytacja charytatywna przedmiotów przekazanych przez darczyńców. Cały dochód zostanie przeznaczony na leczenie, rehabilitację oraz dalszą walkę Grażyny o zdrowie.
+      </p>
+
+      <div class="auction-grid">
+
+        <div class="auction-poster-wrap">
+          <!-- Replace with auction poster: assets/images/auction-poster.jpg -->
+          <button class="auction-poster-btn" id="auctionPosterBtn" aria-label="Powiększ plakat licytacji">
+            <img
+              src="assets/images/auction-poster.jpg"
+              alt="Plakat licytacji charytatywnej dla Grażyny Nowak"
+              class="auction-poster-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="auction-poster-placeholder" style="display:none">
+              <span>assets/images/auction-poster.jpg</span>
+            </div>
+            <span class="auction-poster-zoom" aria-hidden="true">⤢</span>
+          </button>
+        </div>
+
+        <div class="auction-info">
+
+          <div class="auction-details">
+            <div class="auction-detail">
+              <span class="auction-detail-label">Data</span>
+              <span class="auction-detail-value">21.06.2026</span>
+            </div>
+            <div class="auction-detail">
+              <span class="auction-detail-label">Godzina</span>
+              <span class="auction-detail-value">18:00</span>
+            </div>
+            <div class="auction-detail">
+              <span class="auction-detail-label">Miejsce</span>
+              <span class="auction-detail-value">Nowogrodziec</span>
+            </div>
+            <div class="auction-detail auction-detail--wide">
+              <span class="auction-detail-label">Cel</span>
+              <span class="auction-detail-value">Leczenie i rehabilitacja Grażyny Nowak</span>
+            </div>
+          </div>
+
+          <h3 class="auction-items-heading">Przedmioty na licytację</h3>
+          <ul class="auction-items">
+            <li>Koszulka KGHM Zagłębie Lubin z autografami</li>
+            <li>Obraz przedstawiający krajobraz górski</li>
+            <li>Ceramika bolesławiecka</li>
+            <li>Karafka dekoracyjna</li>
+            <li>Vouchery i inne upominki</li>
+          </ul>
+
+          <p class="auction-emotional">
+            Przedmioty przekazane przez ludzi, którzy chcą pomóc. Każdy przedmiot niesie wartość. Dla Grażyny oznacza ona szansę.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="auction-closing">
+        <p>Każda wylicytowana rzecz ma znaczenie.<br />Każda złotówka przybliża Grażynę do powrotu do zdrowia.</p>
+        <p class="auction-closing-emphasis">Razem możemy więcej.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Auction poster lightbox -->
+  <div class="auction-modal" id="auctionModal" aria-hidden="true">
+    <div class="auction-modal-backdrop" id="auctionModalBackdrop"></div>
+    <div class="auction-modal-content">
+      <button class="auction-modal-close" id="auctionModalClose" aria-label="Zamknij">×</button>
+      <img src="assets/images/auction-poster.jpg" alt="Plakat licytacji charytatywnej dla Grażyny Nowak" class="auction-modal-img" onerror="this.style.display='none'" />
+    </div>
+  </div>
+
+  <!-- ============================================================
        MESSAGES OF HOPE
   ============================================================ -->
   <section class="section hope" id="hope">
@@ -313,12 +393,7 @@
           <p>"Every recovery begins with hope."</p>
         </div>
         <div class="hope-quote hope-quote--rose">
-          <p>
-"Be strong and take heart,<br>
-all you who hope in the Lord."<br><br>
-
-<span class="verse-ref">— Psalm 31:24</span>
-</p>
+          <p>"Every message matters."</p>
         </div>
         <div class="hope-quote">
           <p>"Every act of kindness helps carry someone forward."</p>

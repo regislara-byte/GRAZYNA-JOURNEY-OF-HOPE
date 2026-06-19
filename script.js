@@ -67,7 +67,8 @@ if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 ──────────────────────────────────────────────────────────────── */
 const revealTargets = document.querySelectorAll(
   '.timeline-item, .hope-quote, .update-card, .about-fact, ' +
-  '.family-grid, .section-title, .about-lead, .update-video-card'
+  '.family-grid, .section-title, .about-lead, .update-video-card, ' +
+  '.auction-detail, .auction-poster-wrap'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -386,7 +387,36 @@ if (shareBtn) {
 
 
 /* ────────────────────────────────────────────────────────────────
-   15. INIT LOG
+   15. CHARITY AUCTION — poster lightbox modal
+──────────────────────────────────────────────────────────────── */
+const auctionModal = document.getElementById('auctionModal');
+const auctionPosterBtn = document.getElementById('auctionPosterBtn');
+const auctionModalBackdrop = document.getElementById('auctionModalBackdrop');
+const auctionModalClose = document.getElementById('auctionModalClose');
+
+if (auctionModal && auctionPosterBtn) {
+  function openAuctionModal() {
+    auctionModal.classList.add('open');
+    auctionModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAuctionModal() {
+    auctionModal.classList.remove('open');
+    auctionModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  auctionPosterBtn.addEventListener('click', openAuctionModal);
+  auctionModalBackdrop.addEventListener('click', closeAuctionModal);
+  auctionModalClose.addEventListener('click', closeAuctionModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && auctionModal.classList.contains('open')) closeAuctionModal();
+  });
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   16. INIT LOG
 ──────────────────────────────────────────────────────────────── */
 console.log(
   '%c Grażyna Nowak — Journey of Hope ',
