@@ -47,7 +47,7 @@ window.addEventListener('scroll', setActiveNav, { passive: true });
 /* ────────────────────────────────────────────────────────────────
    2. HERO PARALLAX
 ──────────────────────────────────────────────────────────────── */
-const heroImg = document.querySelector('.hero-img');
+const heroImg = document.querySelector('.hero-bg-img');
 const heroContent = document.querySelector('.hero-content');
 
 if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -55,8 +55,8 @@ if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const y = window.scrollY;
     if (y < window.innerHeight) {
       heroImg.style.transform = `translateY(${y * 0.35}px)`;
-      heroContent.style.transform = `translateY(${y * 0.15}px)`;
-      heroContent.style.opacity = 1 - (y / (window.innerHeight * 0.75));
+      heroContent.style.transform = `translateY(${y * 0.1}px)`;
+      heroContent.style.opacity = 1 - (y / (window.innerHeight * 0.8));
     }
   }, { passive: true });
 }
