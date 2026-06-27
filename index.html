@@ -40,11 +40,12 @@
   </nav>
 
   <!-- ============================================================
-       HERO — CINEMATIC SPLIT · GOAL VERSION
+       HERO — CINEMATIC SPECULAR LIGHTING SYSTEM v003
+       Layout preserved. Visual engineering layer only.
   ============================================================ -->
   <section class="hero" id="hero">
 
-    <!-- Portrait fills left ~60%, face centered -->
+    <!-- ░░ PORTRAIT ZONE — left 62% ░░ -->
     <div class="hero-portrait-wrap">
       <img
         src="assets/images/nowak1.png"
@@ -52,38 +53,51 @@
         class="hero-portrait"
         onerror="this.parentElement.style.background='#060e09'"
       />
-      <!-- Dissolve portrait into dark right zone -->
+
+      <!-- Horizontal dissolve: portrait → dark right zone -->
       <div class="hero-portrait-fade"></div>
-      <!-- Top darkening so nav reads -->
+
+      <!-- Edge darkening: top (nav clearance) + bottom (ground) -->
       <div class="hero-portrait-top"></div>
-      <!-- Bottom darkening -->
       <div class="hero-portrait-bottom"></div>
-      <!-- Rim light: cool specular on right edge of face -->
-      <div class="hero-rim-light"></div>
-      <!-- Hair gloss: soft specular on crown -->
-      <div class="hero-hair-gloss"></div>
+
+      <!-- ① RIM LIGHT — cool white specular on right edge of face
+           Simulates off-camera key light. Separates face from bg. -->
+      <div class="hero-rim-light" aria-hidden="true"></div>
+
+      <!-- ② FACIAL SEPARATION — warm amber mid-light on cheek/jaw
+           Lifts eyes and smile into readability without brightening
+           the whole portrait. Amber reads as natural tungsten. -->
+      <div class="hero-face-light" aria-hidden="true"></div>
+
+      <!-- ③ HAIR GLOSS — specular sheen on crown
+           Mimics studio soft-box grazing the top of the head. -->
+      <div class="hero-hair-gloss" aria-hidden="true"></div>
     </div>
 
-    <!-- Deep dark green base (right zone atmosphere) -->
-    <div class="hero-bg-base"></div>
+    <!-- ░░ BACKGROUND — deep forest dark ░░ -->
+    <div class="hero-bg-base" aria-hidden="true"></div>
 
-    <!-- Volumetric light column from upper-left -->
+    <!-- ④ VOLUMETRIC LIGHT — directional column from upper-left
+         Low opacity. Gives the scene physical air and atmosphere. -->
     <div class="hero-vol-light" aria-hidden="true"></div>
 
-    <!-- Ambient bloom behind the name -->
+    <!-- ⑤ RADIAL BLOOM — ambient halo behind name
+         Not a glow. Reads as environmental reflected light. -->
     <div class="hero-bloom" aria-hidden="true"></div>
 
-    <!-- Film grain texture -->
+    <!-- Film grain — subliminal texture, not an effect -->
     <div class="hero-grain" aria-hidden="true"></div>
 
-    <!-- Layered vignette shadows -->
-    <div class="hero-shadow-vignette" aria-hidden="true"></div>
+    <!-- ⑦ LAYERED VIGNETTE — 6 stacked gradients, not one flat overlay -->
+    <div class="hero-vignette" aria-hidden="true"></div>
 
-    <!-- Right-zone content -->
+    <!-- ░░ CONTENT ZONE — right 38% ░░ -->
     <div class="hero-content">
+
       <p class="hero-eyebrow">A Documentary of Resilience</p>
 
-      <!-- SINGLE LINE title matching goal screenshot -->
+      <!-- ⑥ METALLIC TITLE — brushed silver gradient, not chrome -->
       <h1 class="hero-title">Grażyna Nowak</h1>
 
       <div class="hero-taglines">
@@ -92,7 +106,7 @@
         <p class="hero-tl hero-tl--3">A community's support.</p>
       </div>
 
-      <!-- HORIZONTAL button row -->
+      <!-- ⑧ GLASS BUTTONS — specular inset highlights, cursor shimmer -->
       <div class="hero-actions">
         <a href="#about" class="hbtn hbtn--solid">
           Read Her Story
@@ -104,6 +118,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
+
     </div>
 
     <!-- Scroll cue -->
@@ -112,7 +127,7 @@
       <span class="hero-scroll-label">Scroll</span>
     </div>
 
-    <!-- Bottom wave -->
+    <!-- Wave into next section -->
     <div class="hero-wave" aria-hidden="true">
       <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,72 L0,36 C180,72 360,0 540,28 C720,56 900,4 1080,32 C1260,60 1380,20 1440,36 L1440,72 Z" fill="#FAFAF8"/>

@@ -45,12 +45,15 @@ window.addEventListener('scroll', setActiveNav, { passive: true });
 
 
 /* ────────────────────────────────────────────────────────────────
-   2. HERO PARALLAX — layered depth at different scroll speeds
+   2. HERO PARALLAX — each layer drifts at its own rate
+   Portrait slowest (anchored), bloom middle, vol-light fastest.
+   Creates genuine parallax depth on scroll out.
 ──────────────────────────────────────────────────────────────── */
 const heroPortrait = document.querySelector('.hero-portrait');
 const heroContent  = document.querySelector('.hero-content');
 const heroBloom    = document.querySelector('.hero-bloom');
 const heroVol      = document.querySelector('.hero-vol-light');
+const heroFace     = document.querySelector('.hero-face-light');
 
 if (heroPortrait && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   window.addEventListener('scroll', () => {
@@ -58,12 +61,27 @@ if (heroPortrait && !window.matchMedia('(prefers-reduced-motion: reduce)').match
     const vh = window.innerHeight;
     if (y > vh) return;
     const t = y / vh;
-    heroPortrait.style.transform = `translateY(${y * 0.22}px) scale(${1 + t * 0.025})`;
-    if (heroBloom) heroBloom.style.transform = `translate(-50%, calc(-50% + ${y * 0.12}px))`;
-    if (heroVol)   heroVol.style.transform   = `skewX(${-5 + t * 2}deg) translateY(${y * 0.08}px)`;
+
+    // Portrait — slowest, most grounded
+    heroPortrait.style.transform =
+      `translateY(${y * 0.20}px) scale(${1 + t * 0.022})`;
+
+    // Face light drifts with portrait
+    if (heroFace) heroFace.style.transform =
+      `translate(-10%, -5%) translateY(${y * 0.18}px) scale(${1 + t * 0.025})`;
+
+    // Bloom — mid speed, floats away
+    if (heroBloom) heroBloom.style.transform =
+      `translate(-50%, calc(-50% + ${y * 0.10}px))`;
+
+    // Volumetric light — faster drift + skew shift
+    if (heroVol) heroVol.style.transform =
+      `skewX(${-5 + t * 2.5}deg) translateY(${y * 0.07}px)`;
+
+    // Content — subtle upward drift, fades out cleanly
     if (heroContent) {
-      heroContent.style.transform = `translateY(${y * 0.07}px)`;
-      heroContent.style.opacity   = Math.max(0, 1 - t * 1.5);
+      heroContent.style.transform = `translateY(${y * 0.06}px)`;
+      heroContent.style.opacity   = Math.max(0, 1 - t * 1.55);
     }
   }, { passive: true });
 }
@@ -423,17 +441,10 @@ if (auctionModal && auctionPosterBtn) {
 
 
 /* ────────────────────────────────────────────────────────────────
-   16. INIT LOG
-──────────────────────────────────────────────────────────────── */
-console.log(
-  '%c Grażyna Nowak — Journey of Hope ',
-  'background: #2D5A3D; color: #fff; font-size: 14px; padding: 6px 12px; border-radius: 4px; font-family: serif;'
-);
-console.log('%c Phase 001 · Foundation Build · script.js loaded', 'color: #C4777A; font-size: 11px;');
-
-
-/* ────────────────────────────────────────────────────────────────
-   16. SPECULAR SHIMMER — cursor-tracked light on glass buttons
+   17. GLASS BUTTON SPECULAR SHIMMER
+   Tracks cursor across each .hbtn pill in real-time.
+   Sets --shine-x / --shine-y CSS vars → radial highlight in CSS.
+   Simulates light reflecting off a convex glass surface.
 ──────────────────────────────────────────────────────────────── */
 document.querySelectorAll('.hbtn').forEach(btn => {
   btn.addEventListener('mousemove', (e) => {
@@ -444,3 +455,13 @@ document.querySelectorAll('.hbtn').forEach(btn => {
   });
   btn.addEventListener('mouseleave', () => btn.classList.remove('btn-lit'));
 });
+
+
+/* ────────────────────────────────────────────────────────────────
+   16. INIT LOG
+──────────────────────────────────────────────────────────────── */
+console.log(
+  '%c Grażyna Nowak — Journey of Hope ',
+  'background: #2D5A3D; color: #fff; font-size: 14px; padding: 6px 12px; border-radius: 4px; font-family: serif;'
+);
+console.log('%c Phase 001 · Foundation Build · script.js loaded', 'color: #C4777A; font-size: 11px;');
