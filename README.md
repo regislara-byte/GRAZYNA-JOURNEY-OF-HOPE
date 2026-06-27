@@ -147,6 +147,7 @@ Special thanks to:
 * Community Supporters
 * Friends and Volunteers
 * Everyone who shares the message of hope
+* Official Fundraisers
 
 ---
 
@@ -163,6 +164,24 @@ Current Phase:
 ✅ Charity Story Framework Established
 
 🚧 Continuous Improvements In Progress
+
+## VLA Engineering Workflow
+
+Vision
+      ↓
+Markdown Specification
+      ↓
+AI Collaboration
+      ↓
+Implementation
+      ↓
+Deployment
+      ↓
+Visual Feedback
+      ↓
+Documentation
+      ↓
+Iteration
 
 ---
 
