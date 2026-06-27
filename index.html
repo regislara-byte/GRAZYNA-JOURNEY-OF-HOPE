@@ -40,93 +40,82 @@
   </nav>
 
   <!-- ============================================================
-       HERO — PREMIUM CINEMATIC
+       HERO — CINEMATIC SPLIT · GOAL VERSION
   ============================================================ -->
   <section class="hero" id="hero">
 
-    <!-- Full-bleed background image -->
-    <div class="hero-bg-wrap">
+    <!-- Portrait fills left ~60%, face centered -->
+    <div class="hero-portrait-wrap">
       <img
         src="assets/images/nowak1.png"
-        alt="Grażyna Nowak — Journey of Hope portrait"
-        class="hero-bg-img"
-        onerror="this.style.display='none'"
+        alt="Grażyna Nowak — Journey of Hope"
+        class="hero-portrait"
+        onerror="this.parentElement.style.background='#060e09'"
       />
-      <!-- Layered overlays for depth -->
-      <div class="hero-overlay-vignette"></div>
-      <div class="hero-overlay-gradient"></div>
-      <div class="hero-overlay-left-fade"></div>
+      <!-- Dissolve portrait into dark right zone -->
+      <div class="hero-portrait-fade"></div>
+      <!-- Top darkening so nav reads -->
+      <div class="hero-portrait-top"></div>
+      <!-- Bottom darkening -->
+      <div class="hero-portrait-bottom"></div>
+      <!-- Rim light: cool specular on right edge of face -->
+      <div class="hero-rim-light"></div>
+      <!-- Hair gloss: soft specular on crown -->
+      <div class="hero-hair-gloss"></div>
     </div>
 
-    <!-- Ambient light leak effects -->
-    <div class="hero-light-leak hero-light-leak--1" aria-hidden="true"></div>
-    <div class="hero-light-leak hero-light-leak--2" aria-hidden="true"></div>
+    <!-- Deep dark green base (right zone atmosphere) -->
+    <div class="hero-bg-base"></div>
 
-    <!-- Grain texture overlay for film feel -->
+    <!-- Volumetric light column from upper-left -->
+    <div class="hero-vol-light" aria-hidden="true"></div>
+
+    <!-- Ambient bloom behind the name -->
+    <div class="hero-bloom" aria-hidden="true"></div>
+
+    <!-- Film grain texture -->
     <div class="hero-grain" aria-hidden="true"></div>
 
-    <!-- Content: split left-anchored layout -->
+    <!-- Layered vignette shadows -->
+    <div class="hero-shadow-vignette" aria-hidden="true"></div>
+
+    <!-- Right-zone content -->
     <div class="hero-content">
+      <p class="hero-eyebrow">A Documentary of Resilience</p>
 
-      <!-- Glass badge -->
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        A Documentary of Resilience
+      <!-- SINGLE LINE title matching goal screenshot -->
+      <h1 class="hero-title">Grażyna Nowak</h1>
+
+      <div class="hero-taglines">
+        <p class="hero-tl hero-tl--1">A mother's fight.</p>
+        <p class="hero-tl hero-tl--2">A family's strength.</p>
+        <p class="hero-tl hero-tl--3">A community's support.</p>
       </div>
 
-      <!-- Main title -->
-      <h1 class="hero-title">
-        <span class="hero-title-first">Grażyna</span>
-        <span class="hero-title-last">Nowak</span>
-      </h1>
-
-      <!-- Tagline with animated lines -->
-      <div class="hero-tagline-wrap">
-        <p class="hero-tagline-line hero-tagline-line--1">
-          <span class="tagline-bar"></span>A mother's fight.
-        </p>
-        <p class="hero-tagline-line hero-tagline-line--2">A family's strength.</p>
-        <p class="hero-tagline-line hero-tagline-line--3">A community's support.</p>
-      </div>
-
-      <!-- Glassmorphism stat pills -->
-      <div class="hero-stats">
-        <div class="hero-stat-pill">
-          <span class="hero-stat-num">51</span>
-          <span class="hero-stat-label">Years old</span>
-        </div>
-        <div class="hero-stat-pill">
-          <span class="hero-stat-num">3</span>
-          <span class="hero-stat-label">Surgeries</span>
-        </div>
-        <div class="hero-stat-pill hero-stat-pill--live">
-          <span class="hero-stat-live-dot"></span>
-          <span class="hero-stat-label">Fighting now</span>
-        </div>
-      </div>
-
-      <!-- CTA row -->
+      <!-- HORIZONTAL button row -->
       <div class="hero-actions">
-        <a href="#about" class="hero-btn hero-btn--primary">
-          <span>Read Her Story</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <a href="#about" class="hbtn hbtn--solid">
+          Read Her Story
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#updates" class="hero-btn hero-btn--glass">Latest Updates</a>
-        <a href="https://www.siepomaga.pl/grazyna-nowak" target="_blank" rel="noopener" class="hero-btn hero-btn--outline">Support →</a>
+        <a href="#updates" class="hbtn hbtn--glass">Latest Updates</a>
+        <a href="https://www.siepomaga.pl/grazyna-nowak" target="_blank" rel="noopener" class="hbtn hbtn--ghost">
+          Official Support Page
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-
     </div>
 
     <!-- Scroll cue -->
-    <div class="hero-scroll-cue" aria-hidden="true">
-      <span class="hero-scroll-text">Scroll</span>
-      <div class="hero-scroll-line"></div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-mouse"><div class="hero-scroll-wheel"></div></div>
+      <span class="hero-scroll-label">Scroll</span>
     </div>
 
-    <!-- Bottom chapter divider -->
-    <div class="hero-chapter-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,80 L0,40 Q120,0 240,35 Q360,70 480,25 Q600,-15 720,30 Q840,75 960,20 Q1080,-35 1200,30 Q1320,65 1440,15 L1440,80 Z" fill="#FAFAF8"/>
+    <!-- Bottom wave -->
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,72 L0,36 C180,72 360,0 540,28 C720,56 900,4 1080,32 C1260,60 1380,20 1440,36 L1440,72 Z" fill="#FAFAF8"/>
       </svg>
     </div>
 

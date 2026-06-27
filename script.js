@@ -45,18 +45,25 @@ window.addEventListener('scroll', setActiveNav, { passive: true });
 
 
 /* ────────────────────────────────────────────────────────────────
-   2. HERO PARALLAX
+   2. HERO PARALLAX — layered depth at different scroll speeds
 ──────────────────────────────────────────────────────────────── */
-const heroImg = document.querySelector('.hero-bg-img');
-const heroContent = document.querySelector('.hero-content');
+const heroPortrait = document.querySelector('.hero-portrait');
+const heroContent  = document.querySelector('.hero-content');
+const heroBloom    = document.querySelector('.hero-bloom');
+const heroVol      = document.querySelector('.hero-vol-light');
 
-if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (heroPortrait && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      heroImg.style.transform = `translateY(${y * 0.35}px)`;
-      heroContent.style.transform = `translateY(${y * 0.1}px)`;
-      heroContent.style.opacity = 1 - (y / (window.innerHeight * 0.8));
+    const y  = window.scrollY;
+    const vh = window.innerHeight;
+    if (y > vh) return;
+    const t = y / vh;
+    heroPortrait.style.transform = `translateY(${y * 0.22}px) scale(${1 + t * 0.025})`;
+    if (heroBloom) heroBloom.style.transform = `translate(-50%, calc(-50% + ${y * 0.12}px))`;
+    if (heroVol)   heroVol.style.transform   = `skewX(${-5 + t * 2}deg) translateY(${y * 0.08}px)`;
+    if (heroContent) {
+      heroContent.style.transform = `translateY(${y * 0.07}px)`;
+      heroContent.style.opacity   = Math.max(0, 1 - t * 1.5);
     }
   }, { passive: true });
 }
@@ -423,3 +430,17 @@ console.log(
   'background: #2D5A3D; color: #fff; font-size: 14px; padding: 6px 12px; border-radius: 4px; font-family: serif;'
 );
 console.log('%c Phase 001 · Foundation Build · script.js loaded', 'color: #C4777A; font-size: 11px;');
+
+
+/* ────────────────────────────────────────────────────────────────
+   16. SPECULAR SHIMMER — cursor-tracked light on glass buttons
+──────────────────────────────────────────────────────────────── */
+document.querySelectorAll('.hbtn').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const r = btn.getBoundingClientRect();
+    btn.style.setProperty('--shine-x', ((e.clientX - r.left) / r.width  * 100) + '%');
+    btn.style.setProperty('--shine-y', ((e.clientY - r.top)  / r.height * 100) + '%');
+    btn.classList.add('btn-lit');
+  });
+  btn.addEventListener('mouseleave', () => btn.classList.remove('btn-lit'));
+});
