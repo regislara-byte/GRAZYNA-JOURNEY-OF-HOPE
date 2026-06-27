@@ -165,6 +165,8 @@ Current Phase:
 
 🚧 Continuous Improvements In Progress
 
+---
+
 ## VLA Engineering Workflow
 
 Vision
@@ -190,3 +192,41 @@ Built with compassion, transparency, and hope.
 © 2026 Grażyna Journey of Hope
 
 Organized by Julia Nowak and Community Supporters
+
+---
+
+# Legacy
+
+Every repository tells a technical story.
+
+This repository tells a human story.
+
+Grażyna Journey of Hope exists to preserve a family's resilience, celebrate a community's compassion, and remind us that even the smallest act of kindness can become part of someone's recovery.
+
+Technology built this website.
+
+People give it meaning.
+
+---
+
+## Official Support
+
+Official fundraising platforms:
+
+🇵🇱 Siepomaga
+
+https://www.siepomaga.pl/grazyna-nowak
+
+🌍 4Fund
+
+https://4fund.com/pl/6ff9r8
+
+All financial support goes directly through the official fundraising platforms.
+
+This repository does not process donations.
+
+---
+
+*"Hope grows stronger when a community walks the journey together."*
+
+— Grażyna Journey of Hope
